@@ -1,0 +1,15 @@
+LOCK TABLES `AuthItem` WRITE;
+INSERT INTO `AuthItem` VALUES ('Admin',2,NULL,NULL,'N;'),('changeOwnSite',1,'changeOwnSite',NULL,'N;'),('createSite',0,'createSite','','N;'),('deleteOwnSite',1,'deleteOwnSite','function isUserHasSite($params) {\r\n            $userSite = UsersSitesRights::model()\r\n               ->statesAtLeast(array(\'changeSite\'))\r\n              ->findAll(\r\n                  \'User_id=:userId AND Site_id=:siteId\', \r\n                   array(\r\n                      \':userId\' => UserModule::getUserId(),\r\n                        \':siteId\' => $params[\"site\"][\"siteId\"]\r\n            ));\r\n         if (empty($userSite)) {\r\n             return false;\r\n           }\r\n           return true;\r\n        }\r\nreturn isUserHasSite($params);','N;'),('deleteSite',0,'deleteSite',NULL,'N;'),('readOwnSite',1,'readOwnSite','function isUserHasSite($params) {\r\n    if (empty($params[\'site\'][\'userId\'])) {\r\n        return true;\r\n    }\r\n    $userId = UserModule::getUserId();\r\n    if ($params[\'site\'][\'userId\'] != $userId) {\r\n        return false;\r\n    }\r\n    $userSite = UsersSitesRights::model()\r\n        ->statesAtLeast(array(\'viewSite\'))\r\n        ->findAll(\r\n            \'User_id=:userId\', \r\n            array(\':userId\' => $userId)\r\n        );\r\n    if (empty($userSite)) {\r\n        return false;\r\n    }\r\n    return true;\r\n}\r\nreturn isUserHasSite($params);','N;'),('readSite',0,'readSite',NULL,'N;'),('siteAuthor',2,'siteAuthor',NULL,'N;'),('siteAuthorVUD',2,'siteAuthorVUD',NULL,'N;'),('siteReader',2,'siteReader',NULL,'N;'),('updateOwnSite',1,'updateOwnSite','function isUserHasSite($params) {\r\n            $userSite = UsersSitesRights::model()\r\n               ->statesAtLeast(array(\'changeSite\'))\r\n              ->findAll(\r\n                  \'User_id=:userId AND Site_id=:siteId\', \r\n                   array(\r\n                      \':userId\' => UserModule::getUserId(),\r\n                        \':siteId\' => $params[\"site\"][\"siteId\"]\r\n            ));\r\n         if (empty($userSite)) {\r\n             return false;\r\n           }\r\n           return true;\r\n        }\r\nreturn isUserHasSite($params);','N;'),('updateSite',0,'updateSite',NULL,'N;'),('viewOwnSite',1,'viewOwnSite',NULL,'N;');
+UNLOCK TABLES;
+
+LOCK TABLES `AuthItemChild` WRITE;
+INSERT INTO `AuthItemChild` VALUES ('siteAuthor','changeOwnSite'),('siteAuthor','createSite'),('changeOwnSite','deleteOwnSite'),('deleteOwnSite','deleteSite'),('viewOwnSite','readOwnSite'),('readOwnSite','readSite'),('changeOwnSite','updateOwnSite'),('updateOwnSite','updateSite'),('siteAuthor','viewOwnSite'),('siteAuthorVUD','changeOwnSite'),('siteAuthorVUD','viewOwnSite'),('siteReader','viewOwnSite');
+UNLOCK TABLES;
+
+LOCK TABLES `AuthAssignment` WRITE;
+INSERT INTO `AuthAssignment` VALUES ('siteAuthor','2',NULL,'N;'), ('siteAuthor','3',NULL,'N;');
+UNLOCK TABLES;
+
+LOCK TABLES `users_rights_defaults` WRITE;
+INSERT INTO users_rights_defaults VALUES ('Site', 'YToyOntzOjg6InZpZXdTaXRlIjtzOjQ6InZpZXciO3M6MTA6ImNoYW5nZVNpdGUiO3M6NjoiY2hhbmdlIjt9');
+UNLOCK TABLES;

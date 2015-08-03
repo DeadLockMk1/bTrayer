@@ -1,0 +1,42 @@
+<?php
+    $this->breadcrumbs=array(
+    'Resources',
+    'Search'
+);
+    $this->renderPartial('_form', array(
+            'siteId'=>'',
+            'status'=>'',
+            'resourceURL'=>'',
+            'resourceId'=>'',
+            'contentType'=>'',
+            'tcDateFrom'=>'',
+            'tcDateTo'=>'',
+            'tcTimeFrom'=>'',
+            'tcTimeTo'=>'',
+            'limit'=>'10',
+            'httpCode'=>'',
+            'state'=>       '',
+            'depthFrom'=>   '',
+            'depthTo'=>     '',
+            'type'=>        '',
+            'cDateFrom'=>  '',
+            'cDateTo'=>    '',
+            'cTimeFrom'=>  '',
+            'cTimeTo'=>    '',
+            'pDateFrom'=>  '',
+            'pDateTo'=>    '',
+            'pTimeFrom'=>  '',
+            'pTimeTo'=>    '',
+            'parentUrl'=>  '',
+            'errorMask'=>  '',
+            'onlyRoot'=>   false,
+            'tagsMask'=>   '',
+            'tagsCount'=>  '',
+            'sortBy'=> 'UDate',
+            'sortDirection'=>  'DESC',
+            'hidden'=>'',
+            'position'=>'pos-abs',
+            'page'=>'0',
+            'btn'=>'hidden',
+            )
+        );

@@ -1,0 +1,21 @@
+.hl-green {
+    background-color: lightgreen !important;
+}
+.hl-red {
+    background-color: #ff9f95 !important;
+}
+.hl-blue {
+    background-color: #c1bfff !important;
+}
+.hl-yellow {
+    background-color: #fdff88!important;
+}
+.hl-dgrey {
+    background-color: #b4b3b8!important;
+}
+.hl-lgrey {
+    background-color: #dedde3!important;
+}
+.hl-redT {
+    color: #d43339 !important;
+}

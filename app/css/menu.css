@@ -1,0 +1,124 @@
+html,
+  body {
+    margin: 0;
+  }
+input.small-menu-checkbox {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+label {
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+/*TOP menu style*/
+#mainmenu {
+    background: #404040;
+    position: fixed;
+    top:0;
+    left: 0;
+    right:0;
+    margin: 0 0 0 0;
+    z-index: 999;
+    box-shadow: 0 0.25em 0.5em 0 #606060;
+    margin-bottom: 1em;
+    /*width: 100%;*/
+    min-width: 1666px;
+}
+/* background for li / select */
+/* custom-dropdown */
+nav[role="custom-dropdown"] {
+  margin-left:1em;
+  position: relative;
+  height: 0px;
+  width: 100%;
+}
+nav[role="custom-dropdown"] a,
+nav[role="custom-dropdown"] label {
+  color: #ccc;
+  text-decoration: none;
+  font: 1em sans-serif;
+  transition: color .3s ease-in-out;
+}
+nav[role="custom-dropdown"] ul {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  list-style: none;
+}
+nav[role="custom-dropdown"] ul > li {
+  float: left;
+  padding: .55em .55em;
+  background: #404040;
+  width: auto;
+  text-align: center;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+  transition-property: box-shadow, color, text-shadow;
+  cursor: pointer;
+}
+nav[role="custom-dropdown"] ul > li:hover {
+  color: #fff;
+  box-shadow: 0 0.5em 0 0 #8FC800;
+  text-shadow: 0 0 1em #99FF00;
+
+}
+nav[role="custom-dropdown"] ul > li[class="active"] {
+  background-color: #404040;
+  color: #fff;
+}
+nav[role="custom-dropdown"] ul > li:hover > a {
+  color: #fff;
+}
+
+/* small screens */
+@media screen and (max-width: 44em) {
+  html,
+  body {
+    margin: 0;
+  }
+
+  nav[role="custom-dropdown"] ul {
+    display: none;
+    height: 100%;
+  }
+  nav[role="custom-dropdown"] label {
+    position: relative;
+    left: 0;
+    display: block;
+    width: 100%;
+    min-height: 2.25em;
+    padding: .45em;
+    font-size: 1.1em;
+    margin: 0;
+    border: 0.15em solid rgba(60, 60, 60, 0.2);
+    float: left;
+  }
+  nav[role="custom-dropdown"] label:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "\2261";
+    font-size: 1.8em;
+  }
+  nav[role="custom-dropdown"] input[type=checkbox]:checked ~ label:after {
+    color: #222;
+  }
+  nav[role="custom-dropdown"] input[type=checkbox]:checked ~ ul {
+    display: block;
+  }
+  nav[role="custom-dropdown"] input[type=checkbox]:checked ~ ul > li {
+    width: 100%;
+    opacity: .8;
+    box-shadow: none;
+    text-align: left;
+  }
+  nav[role="custom-dropdown"] input[type=checkbox]:checked ~ ul > li:after {
+    position: absolute;
+    right: .25em;
+    content: "\203A";
+    font: bold 1.4em sans-serif;
+  }
+}

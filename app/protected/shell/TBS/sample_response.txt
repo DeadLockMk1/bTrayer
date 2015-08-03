@@ -1,0 +1,35 @@
+{
+    "errorCode": 0, 
+    "errorMessage": "", 
+    "itemsList": [
+        {
+            "errorCode": 0, 
+            "errorMessage": "", 
+            "host": "localhost", 
+            "id": 2302741320, 
+            "itemObject": [
+                {
+                    "cookies": [], 
+                    "dbFields": {}, 
+                    "headers": [], 
+                    "meta": [], 
+                    "processedContents": [
+                        {
+                            "buffer": "PD94bWwgdmVyc2lvbj0nMS4wJz8+PHJlc3BvbnNlPjxpdGVtPiAgPE15VGl0bGU+TG9uZG9uPC9NeVRpdGxlPjwvaXRlbT48aXRlbT4gIDxNeVRpdGxlPk9ybGFuZG88L015VGl0bGU+PC9pdGVtPjxpdGVtPiAgPE15VGl0bGU+TG9zIEFuZ2VsZXM8L015VGl0bGU+PC9pdGVtPjxpdGVtPiAgPE15VGl0bGU+U2FuIEZyYW5jaXNjbzwvTXlUaXRsZT48L2l0ZW0+PGl0ZW0+ICA8TXlUaXRsZT5TYW4gRGllZ288L015VGl0bGU+PC9pdGVtPjxpdGVtPiAgPE15VGl0bGU+Um9tZTwvTXlUaXRsZT48L2l0ZW0+PGl0ZW0+ICA8TXlUaXRsZT5CYW5na29rPC9NeVRpdGxlPjwvaXRlbT48aXRlbT4gIDxNeVRpdGxlPlNpbmdhcG9yZTwvTXlUaXRsZT48L2l0ZW0+PC9yZXNwb25zZT4=", 
+                            "cDate": 0, 
+                            "fieldId": 10
+                        }
+                    ], 
+                    "rawContents": [], 
+                    "requests": [], 
+                    "status": 7, 
+                    "url": "http://127.0.0.1/booking.html", 
+                    "urlMd5": null
+                }
+            ], 
+            "node": "r012_data", 
+            "port": "5731", 
+            "time": 9874
+        }
+    ]
+}
